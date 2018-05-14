@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="664859cb-21a2-4125-8b29-ffc2eedda19d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="New Dataset 1" uuid="4e9aca62-fe87-41dc-ac88-ba36866b9909">
+		<queryString language="SQL">
+			<![CDATA[SELECT
+     barang.`kode_barang` AS barang_kode_barang,
+     barang.`nama` AS barang_nama,
+     barang.`harga` AS barang_harga,
+     barang.`panjang` AS barang_panjang,
+     barang.`lebar` AS barang_lebar,
+     barang.`tebal` AS barang_tebal,
+     barang.`volum_brg` AS barang_volum_brg,
+     barang.`qty` AS barang_qty
+FROM
+     `barang` barang]]>
+		</queryString>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     barang.`kode_barang` AS barang_kode_barang,
+     barang.`nama` AS barang_nama,
+     barang.`harga` AS barang_harga,
+     barang.`panjang` AS barang_panjang,
+     barang.`lebar` AS barang_lebar,
+     barang.`tebal` AS barang_tebal,
+     barang.`volum_brg` AS barang_volum_brg,
+     barang.`qty` AS barang_qty
+FROM
+     `barang` barang]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<componentElement>
+				<reportElement x="283" y="0" width="360" height="140" uuid="a6f52103-834d-408c-9944-a5633e7132b3"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset 1" uuid="758f7489-b4e3-4f39-9d04-6dd5258ec8e9">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource(1)]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="205" uuid="8b7f3f32-c65e-4ce5-9d5d-d87d63f9d218">
+						<jr:tableHeader height="30" rowSpan="1"/>
+						<jr:tableFooter height="30" rowSpan="1"/>
+						<jr:columnHeader height="30" rowSpan="1"/>
+						<jr:columnFooter height="30" rowSpan="1"/>
+						<jr:detailCell height="20" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="90" uuid="0fbca8ee-f82c-40f4-ad24-25273f7b7f57">
+						<jr:tableHeader height="30" rowSpan="1"/>
+						<jr:tableFooter height="30" rowSpan="1"/>
+						<jr:columnHeader height="30" rowSpan="1"/>
+						<jr:columnFooter height="30" rowSpan="1"/>
+						<jr:detailCell height="20" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="90" uuid="8f555be3-48f1-43bb-a850-8d54621c2c7c">
+						<jr:tableHeader height="30" rowSpan="1"/>
+						<jr:tableFooter height="30" rowSpan="1"/>
+						<jr:columnHeader height="30" rowSpan="1"/>
+						<jr:columnFooter height="30" rowSpan="1"/>
+						<jr:detailCell height="20" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="90" uuid="8020f0f8-fcf9-4b31-9bc8-690b845177b2">
+						<jr:tableHeader height="30" rowSpan="1"/>
+						<jr:tableFooter height="30" rowSpan="1"/>
+						<jr:columnHeader height="30" rowSpan="1"/>
+						<jr:columnFooter height="30" rowSpan="1"/>
+						<jr:detailCell height="20" rowSpan="1"/>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
